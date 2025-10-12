@@ -31,22 +31,18 @@ def test_add_large_numbers():
 
 
 def test_subtract_positive_numbers():
-    """测试正数相减"""
     assert subtract(5, 3) == 2
 
 
 def test_subtract_negative_numbers():
-    """测试负数相减"""
     assert subtract(-1, -1) == 0
 
 
 def test_subtract_mixed_numbers():
-    """测试正负数混合相减"""
     assert subtract(5, -3) == 8
 
 
 def test_subtract_zero():
-    """测试包含零的相减"""
     assert subtract(0, 0) == 0
     assert subtract(5, 0) == 5
 
