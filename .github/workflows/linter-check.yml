@@ -1,4 +1,4 @@
-name: Code Style Linter
+name: Code Style Linter and Tests
 
 on: [push, pull_request]
 
@@ -22,3 +22,7 @@ jobs:
         
     - name: Run flake8 linter
       run: flake8 . --count --show-source --statistics
+      
+    - name: Run unit tests with pytest
+      run: |
+        pytest -v
