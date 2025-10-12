@@ -1,4 +1,4 @@
-from calculator import add
+from calculator import add, subtract
 import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
@@ -28,3 +28,20 @@ def test_add_float_numbers():
 
 def test_add_large_numbers():
     assert add(1000000, 2000000) == 3000000
+
+
+def test_subtract_positive_numbers():
+    assert subtract(5, 3) == 2
+
+
+def test_subtract_negative_numbers():
+    assert subtract(-1, -1) == 0
+
+
+def test_subtract_mixed_numbers():
+    assert subtract(5, -3) == 8
+
+
+def test_subtract_zero():
+    assert subtract(0, 0) == 0
+    assert subtract(5, 0) == 5
