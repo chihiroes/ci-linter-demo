@@ -23,6 +23,7 @@ jobs:
     - name: Run flake8 linter
       run: flake8 . --count --show-source --statistics
       
-    - name: Run unit tests with pytest
+    - name: Run pytest -v
       run: |
-        pytest -v
+        python -c "import sys; print(sys.path)"
+        PYTHONPATH=$GITHUB_WORKSPACE pytest -v
