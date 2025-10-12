@@ -45,4 +45,3 @@ def test_subtract_mixed_numbers():
 def test_subtract_zero():
     assert subtract(0, 0) == 0
     assert subtract(5, 0) == 5
-
